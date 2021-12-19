@@ -88,7 +88,7 @@ class UpgradeCard extends UpgradeBase {
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        const Text('Release Notes:',
+                        const Text('Sürüm Notları:',
                             style: TextStyle(fontWeight: FontWeight.bold)),
                         Text(
                           releaseNotes,
