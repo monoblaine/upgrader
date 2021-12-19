@@ -192,7 +192,7 @@ class UpgraderMessages {
         break;
       case 'tr':
         message =
-            '{{appName}} uygulamanızın yeni bir versiyonu mevcut! Versiyon {{currentAppStoreVersion}} şu anda erişilebilir, mevcut sürümünüz {{currentInstalledVersion}}.';
+            '{{appName}} uygulamasının yeni bir sürümü bulundu.\n\nGüncel sürüm: {{currentAppStoreVersion}}\nKullandığınız sürüm: {{currentInstalledVersion}}';
         break;
       case 'uk':
         message =
@@ -655,7 +655,7 @@ class UpgraderMessages {
         message = 'செயலியை புதுப்பிக்கவா?';
         break;
       case 'tr':
-        message = 'Uygulamayı Güncelle?';
+        message = 'Uygulama Güncellemesi';
         break;
       case 'uk':
         message = 'Оновити?';
