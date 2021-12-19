@@ -104,12 +104,17 @@ class PlayStoreResults {
       final releaseNotesElement = sectionElements.firstWhere(
           (elm) => elm.querySelector('.wSaTQd')!.text == 'What\'s New',
           orElse: () => sectionElements[0]);
-      final releaseNotes = releaseNotesElement
+      final releaseNotesInnerElement = releaseNotesElement
           .querySelector('.PHBdkd')
-          ?.querySelector('.DWPxHb')
-          ?.text;
+          ?.querySelector('.DWPxHb');
 
-      return releaseNotes;
+      if (releaseNotesInnerElement == null) {
+        return null;
+      }
+
+      releaseNotesInnerElement.innerHtml = releaseNotesInnerElement.innerHtml.replaceAll('<br>', '\n');
+
+      return releaseNotesInnerElement.text;
     } catch (e) {
       print('upgrader: PlayStoreResults.releaseNotes exception: $e');
     }
